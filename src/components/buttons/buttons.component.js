@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './style.main.css'
 class Buttons extends Component {
   // const[log, setLog] = useState('')
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       log: '',
@@ -11,14 +11,15 @@ class Buttons extends Component {
     }
   }
 
-  handleClick (e) {
+  handleClick(e) {
+    // hello
     this.props.onParentCallBack(String(e.target.innerText))
     this.setState((state, props) => ({
       log: state.log + String(e.target.innerText)
     }))
   }
 
-  render () {
+  render() {
     return (
       <div id='buttons'>
         <button
